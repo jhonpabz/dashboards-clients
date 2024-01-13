@@ -1,4 +1,4 @@
-import BaseComponentLayout from '@/layouts/BaseComponentLayout';
+import BaseComponentLayout from "@/layouts/BaseComponentLayout";
 
 export function HeaderTitle(props: ComponentsPropsNamespace.HeaderTitle) {
   const { children, ...restProps } = props;
