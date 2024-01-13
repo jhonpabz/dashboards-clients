@@ -17,11 +17,11 @@ export function ColumnContainer(
   return (
     <BaseComponentLayout {...restProps}>
       <HeaderTitle>{heading}</HeaderTitle>
-      <ul className={`${gridColumnClass} grid gap-2`}>
+      <div className={`${gridColumnClass} grid gap-2 w-full`}>
         {widgets.map((widget: any, widgetIndex: Key | null | undefined) => (
           <Card key={widgetIndex} widgetData={widget} />
         ))}
-      </ul>
+      </div>
     </BaseComponentLayout>
   );
 }

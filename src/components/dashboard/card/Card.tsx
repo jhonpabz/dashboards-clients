@@ -6,10 +6,10 @@ export function Card(props: ComponentsPropsNamespace.Card) {
 
   return (
     <BaseComponentLayout {...restProps}>
-      <li className="w-full bg-white">
+      <div className="w-full bg-white">
         <CardTitle>{widgetData.title}</CardTitle>
         <CardSubTitle>{widgetData.subtitle}</CardSubTitle>
-      </li>
+      </div>
     </BaseComponentLayout>
   );
 }

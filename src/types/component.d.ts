@@ -8,9 +8,7 @@ declare namespace ComponentsPropsNamespace {
     widgetData: Configuration.WidgetsType;
   };
 
-  type Container = React.HTMLAttributes<HTMLDivElement> & {
-    columnSize?: number;
-  };
+  type PageContainer = React.HTMLAttributes<HTMLDivElement>;
 
   type ColumnContainer = React.HTMLAttributes<HTMLElement> & {
     data: Configuration.ColumnsType;
