@@ -18,9 +18,14 @@ export function ColumnContainer(
     <BaseComponentLayout {...restProps}>
       <HeaderTitle>{heading}</HeaderTitle>
       <div className={`${gridColumnClass} grid gap-2 w-full`}>
-        {widgets.map((widget: any, widgetIndex: Key | null | undefined) => (
-          <Card key={widgetIndex} widgetData={widget} />
-        ))}
+        {widgets.map(
+          (
+            widget: Configuration.WidgetsType,
+            widgetIndex: Key | null | undefined
+          ) => (
+            <Card key={widgetIndex} widgetData={widget} />
+          )
+        )}
       </div>
     </BaseComponentLayout>
   );

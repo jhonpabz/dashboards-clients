@@ -13,4 +13,8 @@ declare namespace ComponentsPropsNamespace {
   type ColumnContainer = React.HTMLAttributes<HTMLElement> & {
     data: Configuration.ColumnsType;
   };
+
+  type CardList = React.HTMLAttributes<HTMLElement> & {
+    name: string;
+  };
 }

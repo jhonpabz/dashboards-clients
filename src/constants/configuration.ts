@@ -1,4 +1,4 @@
-export const configuration = {
+export const configuration: Configuration.ConfigurationType = {
   columns: [
     {
       // First column
