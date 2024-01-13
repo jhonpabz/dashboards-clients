@@ -11,4 +11,8 @@ declare namespace ComponentsPropsNamespace {
   type Container = React.HTMLAttributes<HTMLDivElement> & {
     columnSize?: string;
   };
+
+  type ColumnContainer = React.HTMLAttributes<HTMLElement> & {
+    data: Configuration.ColumnsType;
+  };
 }
