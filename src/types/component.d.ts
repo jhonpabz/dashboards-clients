@@ -7,4 +7,8 @@ declare namespace ComponentsPropsNamespace {
   type Card = React.HTMLAttributes<HTMLElement> & {
     widgetData: Configuration.WidgetsType;
   };
+
+  type Container = React.HTMLAttributes<HTMLDivElement> & {
+    columnSize?: string;
+  };
 }
