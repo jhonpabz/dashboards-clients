@@ -9,7 +9,7 @@ declare namespace ComponentsPropsNamespace {
   };
 
   type Container = React.HTMLAttributes<HTMLDivElement> & {
-    columnSize?: string;
+    columnSize?: number;
   };
 
   type ColumnContainer = React.HTMLAttributes<HTMLElement> & {

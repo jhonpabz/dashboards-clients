@@ -1,12 +1,12 @@
 import { useMemo } from "react";
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
+import { getColumnSize } from "@/utils/helpers";
 
 export function Container(props: ComponentsPropsNamespace.Container) {
-  const { columnSize = "2", children, ...restProps } = props;
+  const { columnSize = 2, children, ...restProps } = props;
 
   const gridColumnClass = useMemo(() => {
-    const gridCol = `grid-cols-${columnSize}`;
-    return gridCol;
+    return getColumnSize(columnSize);
   }, [columnSize]);
 
   return (

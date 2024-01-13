@@ -4,7 +4,7 @@ import { Container, ColumnContainer } from "@/components/dashboard";
 import { configuration } from "@/constants/configuration";
 
 export default function HomePage() {
-  const columnSize = configuration.columns.length.toString();
+  const columnSize = configuration.columns.length;
   const dashboardTypes = configuration.columns;
 
   return (
