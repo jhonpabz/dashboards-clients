@@ -6,12 +6,13 @@ export function Container(props: ComponentsPropsNamespace.Container) {
   const { columnSize = 2, children, ...restProps } = props;
 
   const gridColumnClass = useMemo(() => {
-    return getColumnSize(columnSize);
+    const colSize = getColumnSize(columnSize);
+    return colSize ? colSize : "grid-cols-2";
   }, [columnSize]);
 
   return (
     <BaseComponentLayout {...restProps}>
-      <div className={`${gridColumnClass} grid gap-5`}>{children}</div>
+      <div className={`grid gap-5 ${gridColumnClass}`}>{children}</div>
     </BaseComponentLayout>
   );
 }
