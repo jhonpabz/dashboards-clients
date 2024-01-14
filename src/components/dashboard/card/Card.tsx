@@ -9,7 +9,7 @@ export function Card(props: ComponentsPropsNamespace.Card) {
 
   return (
     <BaseComponentLayout {...restProps}>
-      <div className="w-full bg-white">
+      <div className="w-full bg-card p-[20px]">
         {isShowCardList && (
           <CardList widgetData={widgetData} api={widgetData.api} />
         )}

@@ -16,11 +16,16 @@ export function CardList(props: ComponentsPropsNamespace.CardList) {
   return (
     <BaseComponentLayout {...restProps}>
       <>
-        <CardTitle>{widgetData.title}</CardTitle>
-        <CardSubTitle>{widgetData.subtitle}</CardSubTitle>
-        <ul>
+        <div className="bg-white py-[10px] px-[5px] md:py-[14px] md:px-[7px] lg:py-[17px] lg:px-[10px]">
+          <CardTitle>{widgetData.title}</CardTitle>
+          <CardSubTitle>{widgetData.subtitle}</CardSubTitle>
+        </div>
+        <ul className="">
           {state.listData?.map((item, listIndex) => (
-            <li key={listIndex} className="text-[14px]">
+            <li
+              key={listIndex}
+              className="text-[12px] md:text-[14px] lg:text-[16px] font-[600] bg-white my-[5px] p-[2px] md:p-[3px] lg:p-[5px] "
+            >
               {item.name}
             </li>
           ))}

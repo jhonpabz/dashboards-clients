@@ -13,6 +13,10 @@ const config: Config = {
       backgroundColor: {
         main: "#E5E1DA",
         secondary: "#AAD7D9",
+        card: "#FBF9F1",
+      },
+      colors: {
+        sub: "#808080",
       },
     },
   },
