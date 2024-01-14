@@ -3,9 +3,10 @@ import { useEffect } from "react";
 
 import useDashboard from "@/hooks/useDashboard";
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
+import { CardTitle } from "@/components/dashboard";
 
 export function CardCount(props: ComponentsPropsNamespace.CardCount) {
-  const { api, ...restProps } = props;
+  const { api, title, ...restProps } = props;
   const { handleGetCount, state } = useDashboard();
 
   useEffect(() => {
@@ -14,7 +15,10 @@ export function CardCount(props: ComponentsPropsNamespace.CardCount) {
 
   return (
     <BaseComponentLayout {...restProps}>
-      <span className="text-[40px] font-[500]">{state.countData}</span>
+      <>
+        <CardTitle>{title}</CardTitle>
+        <span className="text-[40px] font-[500]">{state.countData}</span>
+      </>
     </BaseComponentLayout>
   );
 }

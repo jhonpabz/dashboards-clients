@@ -1,10 +1,5 @@
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
-import {
-  CardTitle,
-  CardSubTitle,
-  CardList,
-  CardCount,
-} from "@/components/dashboard";
+import { CardList, CardCount } from "@/components/dashboard";
 
 export function Card(props: ComponentsPropsNamespace.Card) {
   const { widgetData, ...restProps } = props;
@@ -16,18 +11,11 @@ export function Card(props: ComponentsPropsNamespace.Card) {
     <BaseComponentLayout {...restProps}>
       <div className="w-full bg-white">
         {isShowCardList && (
-          <>
-            <CardTitle>{widgetData.title}</CardTitle>
-            <CardSubTitle>{widgetData.subtitle}</CardSubTitle>
-            <CardList api={widgetData.api} />
-          </>
+          <CardList widgetData={widgetData} api={widgetData.api} />
         )}
 
         {isShowCardCount && (
-          <>
-            <CardTitle>{widgetData.title}</CardTitle>
-            <CardCount api={widgetData.api} />
-          </>
+          <CardCount title={widgetData.title} api={widgetData.api} />
         )}
       </div>
     </BaseComponentLayout>

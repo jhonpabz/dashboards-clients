@@ -21,10 +21,12 @@ declare namespace ComponentsPropsNamespace {
 
   type CardList = React.HTMLAttributes<HTMLElement> & {
     api: string;
+    widgetData: Configuration.WidgetsType;
   };
 
   type CardCount = React.HTMLAttributes<HTMLElement> & {
     api: string;
+    title: string;
   };
 
   type Dashboard = React.HTMLAttributes<HTMLElement> & {
