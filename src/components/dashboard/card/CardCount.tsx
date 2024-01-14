@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 
-import useDashboard from "@/hooks/redux/useDashboard";
+import useDashboard from "@/hooks/useDashboard";
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
 
 export function CardCount(props: ComponentsPropsNamespace.CardCount) {
