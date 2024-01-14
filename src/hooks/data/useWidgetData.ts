@@ -5,7 +5,7 @@ export function useWidgetData() {
       const result = await response.json();
       return result;
     } catch (error) {
-      console.error("Error fetching data:", error);
+      // console.error("Error fetching data:", error);
     }
   }
 
@@ -15,7 +15,7 @@ export function useWidgetData() {
       const result = await response.json();
       return result;
     } catch (error) {
-      console.error("Error fetching data:", error);
+      // console.error("Error fetching data:", error);
     }
   }
 

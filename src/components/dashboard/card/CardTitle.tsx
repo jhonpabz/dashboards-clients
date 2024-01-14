@@ -10,11 +10,11 @@ export function CardTitle(props: ComponentsPropsNamespace.CardTitle) {
 
   return (
     <BaseComponentLayout {...restProps}>
-      <p
+      <h2
         className={`${textColorClass} text-[12px] sm:text-[14px] md:text-[17px] lg:text-[21] xl:text-[26px] font-[700]`}
       >
         {children}
-      </p>
+      </h2>
     </BaseComponentLayout>
   );
 }

@@ -5,27 +5,27 @@ import { DashboardAction } from "@/stores/dashboard.reducer";
 import { useWidgetData } from "@/hooks/data/useWidgetData";
 
 export default function useDashboard() {
-  const { client } = useAppSelector((s) => s.dashboard);
-  const dispatch = useAppDispatch<DashboardAction>();
+  // const { client } = useAppSelector((s) => s.dashboard);
+  // const dispatch = useAppDispatch<DashboardAction>();
   const { getList, getCount } = useWidgetData();
   const [listData, setListData] = useState<ListDataType[]>([]);
   const [countData, setCountData] = useState<number>(0);
 
-  const setClient = useCallback(
-    (payload: string) => {
-      dispatch({
-        type: "dashboard/setClient",
-        payload,
-      });
-    },
-    [dispatch]
-  );
+  // const setClient = useCallback(
+  //   (payload: string) => {
+  //     dispatch({
+  //       type: "dashboard/setClient",
+  //       payload,
+  //     });
+  //   },
+  //   [dispatch]
+  // );
 
   const handleGetList = useCallback(
     async (api: string) => {
       const res = await getList(api);
 
-      setListData(res.results);
+      setListData(res?.results);
     },
     [getList, setListData]
   );
@@ -45,12 +45,12 @@ export default function useDashboard() {
 
   return {
     state: {
-      client,
+      // client,
       listData,
       countData,
     },
 
-    setClient,
+    // setClient,
     handleGetList,
     handleGetCount,
   };
