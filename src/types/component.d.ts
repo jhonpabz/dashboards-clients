@@ -3,6 +3,7 @@ declare namespace ComponentsPropsNamespace {
   type CardTitle = React.HTMLAttributes<HTMLElement>;
   type CardSubTitle = React.HTMLAttributes<HTMLElement>;
   type HeaderTitle = React.HTMLAttributes<HTMLElement>;
+  type BaseLayout = React.HTMLAttributes<HTMLDivElement>;
 
   type Card = React.HTMLAttributes<HTMLElement> & {
     widgetData: Configuration.WidgetsType;
@@ -24,5 +25,9 @@ declare namespace ComponentsPropsNamespace {
 
   type Dashboard = React.HTMLAttributes<HTMLElement> & {
     client: string;
+  };
+
+  type MenuItem = React.HTMLAttributes<HTMLElement> & {
+    menuItem: RouteType;
   };
 }
