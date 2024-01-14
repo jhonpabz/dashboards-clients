@@ -21,4 +21,8 @@ declare namespace ComponentsPropsNamespace {
   type CardCount = React.HTMLAttributes<HTMLElement> & {
     api: string;
   };
+
+  type Dashboard = React.HTMLAttributes<HTMLElement> & {
+    client: string;
+  };
 }

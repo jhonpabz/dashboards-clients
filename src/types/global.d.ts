@@ -1,5 +1,6 @@
 namespace Configuration {
   type ConfigurationType = {
+    map(arg0: (data: any, index: any) => React.JSX.Element): React.ReactNode;
     columns: ColumnsType[];
   };
 

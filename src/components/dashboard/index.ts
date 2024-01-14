@@ -5,3 +5,4 @@ export * from "@/components/dashboard/card/CardList";
 export * from "@/components/dashboard/card/CardCount";
 export * from "@/components/dashboard/HeaderTitle";
 export * from "@/components/dashboard/ColumnContainer";
+export * from "@/components/dashboard/Dashboard";
