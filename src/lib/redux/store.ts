@@ -4,6 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { storage } from "@/lib/redux/storage";
 import { persistReducer, persistStore } from "redux-persist";
 import dashboardReducer from "@/stores/dashboard.reducer";
+import { middleware } from "@/lib/redux/middleware";
 
 const persistConfig = (key: string) => ({
   key,
@@ -14,6 +15,8 @@ export const store = configureStore({
   reducer: {
     dashboard: persistReducer(persistConfig("dashboard"), dashboardReducer),
   },
+
+  middleware,
 });
 
 export const persistor = persistStore(store);
