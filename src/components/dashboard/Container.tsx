@@ -1,14 +1,31 @@
 import { useMemo } from "react";
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
-import { getColumnSize } from "@/utils/helpers";
 
 export function Container(props: ComponentsPropsNamespace.Container) {
-  const { size = 2, children, ...restProps } = props;
+  const { size, children, ...restProps } = props;
 
   const gridColumnClass = useMemo(() => {
-    const columnSize = getColumnSize(size);
-    return columnSize;
+    switch (size) {
+      case 1:
+        return "grid-cols-1";
+      case 2:
+        return "grid-cols-2";
+      case 3:
+        return "grid-cols-3";
+      case 4:
+        return "grid-cols-4";
+      case 5:
+        return "grid-cols-5";
+      case 6:
+        return "grid-cols-6";
+      case 7:
+        return "grid-cols-7";
+      default:
+        return "grid-cols-2";
+    }
   }, [size]);
+
+  if (!gridColumnClass) return <p>Loading..</p>;
 
   return (
     <BaseComponentLayout {...restProps}>

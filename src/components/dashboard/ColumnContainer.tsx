@@ -1,7 +1,6 @@
 import { Key, useMemo } from "react";
 import BaseComponentLayout from "@/layouts/BaseComponentLayout";
 import { Card } from "@/components/dashboard";
-import { getColumnSize } from "@/utils/helpers";
 
 export function ColumnContainer(
   props: ComponentsPropsNamespace.ColumnContainer
@@ -9,9 +8,27 @@ export function ColumnContainer(
   const { data, children, ...restProps } = props;
 
   const gridColumnClass = useMemo(() => {
-    const columnSize = getColumnSize(data.size);
-    return columnSize;
+    switch (data.size) {
+      case 1:
+        return "grid-cols-1";
+      case 2:
+        return "grid-cols-2";
+      case 3:
+        return "grid-cols-3";
+      case 4:
+        return "grid-cols-4";
+      case 5:
+        return "grid-cols-5";
+      case 6:
+        return "grid-cols-6";
+      case 7:
+        return "grid-cols-7";
+      default:
+        return "grid-cols-2";
+    }
   }, [data.size]);
+
+  if (!gridColumnClass) return <p>Loading..</p>;
 
   return (
     <BaseComponentLayout {...restProps}>
