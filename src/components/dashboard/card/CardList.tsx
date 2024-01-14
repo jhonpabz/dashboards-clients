@@ -24,7 +24,7 @@ export function CardList(props: ComponentsPropsNamespace.CardList) {
           {state.listData?.map((item, listIndex) => (
             <li
               key={listIndex}
-              className="text-[12px] md:text-[14px] lg:text-[16px] font-[600] bg-white my-[5px] p-[2px] md:p-[3px] lg:p-[5px] "
+              className="text-[8px] sm:text-[10px] md:text-[12px] lg:text-[14px] font-[600] bg-white my-[5px] p-[2px] md:p-[3px] lg:p-[5px] "
             >
               {item.name}
             </li>

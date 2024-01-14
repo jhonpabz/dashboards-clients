@@ -11,7 +11,7 @@ export function CardTitle(props: ComponentsPropsNamespace.CardTitle) {
   return (
     <BaseComponentLayout {...restProps}>
       <p
-        className={`${textColorClass} text-[20px] md:text-[23px] lg:text-[26px] font-[700]`}
+        className={`${textColorClass} text-[12px] sm:text-[14px] md:text-[17px] lg:text-[21] xl:text-[26px] font-[700]`}
       >
         {children}
       </p>
