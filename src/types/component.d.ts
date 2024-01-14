@@ -1,9 +1,12 @@
 declare namespace ComponentsPropsNamespace {
   type BaseComponentLayout = React.HTMLAttributes<React.ReactHTMLElement>;
-  type CardTitle = React.HTMLAttributes<HTMLElement>;
   type CardSubTitle = React.HTMLAttributes<HTMLElement>;
   type HeaderTitle = React.HTMLAttributes<HTMLElement>;
   type BaseLayout = React.HTMLAttributes<HTMLDivElement>;
+
+  type CardTitle = React.HTMLAttributes<HTMLElement> & {
+    isList?: boolean | undefined;
+  };
 
   type Card = React.HTMLAttributes<HTMLElement> & {
     widgetData: Configuration.WidgetsType;

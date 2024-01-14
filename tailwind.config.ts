@@ -17,6 +17,8 @@ const config: Config = {
       },
       colors: {
         sub: "#808080",
+        "title-blue": "#115bca",
+        "title-green": "#11B85A",
       },
     },
   },

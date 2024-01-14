@@ -17,7 +17,7 @@ export function CardList(props: ComponentsPropsNamespace.CardList) {
     <BaseComponentLayout {...restProps}>
       <>
         <div className="bg-white py-[10px] px-[5px] md:py-[14px] md:px-[7px] lg:py-[17px] lg:px-[10px]">
-          <CardTitle>{widgetData.title}</CardTitle>
+          <CardTitle isList>{widgetData.title}</CardTitle>
           <CardSubTitle>{widgetData.subtitle}</CardSubTitle>
         </div>
         <ul className="">
