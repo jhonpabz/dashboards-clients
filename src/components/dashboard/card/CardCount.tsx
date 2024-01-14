@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 import useDashboard from "@/hooks/redux/useDashboard";
