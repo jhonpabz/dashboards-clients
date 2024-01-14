@@ -22,3 +22,8 @@ type ListDataType = {
   name: string;
   url: string;
 };
+
+type RouteType = {
+  name: string;
+  path: string;
+};
