@@ -16,3 +16,8 @@ namespace Configuration {
     api: string;
   };
 }
+
+type ListDataType = {
+  name: string;
+  url: string;
+};
