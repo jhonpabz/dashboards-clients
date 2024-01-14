@@ -19,6 +19,6 @@ declare namespace ComponentsPropsNamespace {
   };
 
   type CardCount = React.HTMLAttributes<HTMLElement> & {
-    count: string;
+    api: string;
   };
 }

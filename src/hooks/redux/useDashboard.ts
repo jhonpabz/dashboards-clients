@@ -7,8 +7,9 @@ import { useWidgetData } from "@/hooks/data/useWidgetData";
 export default function useDashboard() {
   const { client } = useAppSelector((s) => s.dashboard);
   const dispatch = useAppDispatch<DashboardAction>();
-  const { getList } = useWidgetData();
+  const { getList, getCount } = useWidgetData();
   const [listData, setListData] = useState<ListDataType[]>([]);
+  const [countData, setCountData] = useState<number>(0);
 
   const setClient = useCallback(
     (payload: string) => {
@@ -29,13 +30,28 @@ export default function useDashboard() {
     [getList, setListData]
   );
 
+  const handleGetCount = useCallback(
+    async (api: string) => {
+      const res = await getCount(api);
+
+      const count =
+        res?.pokemon_species_details?.length +
+        res?.required_for_evolution?.length;
+
+      setCountData(count);
+    },
+    [getCount, setCountData]
+  );
+
   return {
     state: {
       client,
       listData,
+      countData,
     },
 
     setClient,
     handleGetList,
+    handleGetCount,
   };
 }

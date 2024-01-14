@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import BaseComponentLayout from "@/layouts/BaseComponentLayout";
 
+import BaseComponentLayout from "@/layouts/BaseComponentLayout";
 import useDashboard from "@/hooks/redux/useDashboard";
 
 export function CardList(props: ComponentsPropsNamespace.CardList) {
