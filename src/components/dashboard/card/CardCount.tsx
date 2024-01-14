@@ -16,7 +16,7 @@ export function CardCount(props: ComponentsPropsNamespace.CardCount) {
   return (
     <BaseComponentLayout {...restProps}>
       <>
-        <div className="bg-white py-[10px] px-[5px] md:py-[14px] md:px-[7px] lg:py-[17px] lg:px-[10px]">
+        <div className="py-[10px] md:py-[14px] lg:py-[17px]">
           <CardTitle>{title}</CardTitle>
         </div>
         <span className="text-[20px] sm:text-[25px] md:text-[35px] lg:text-[50px] xl:text-[80px] font-[400]">
